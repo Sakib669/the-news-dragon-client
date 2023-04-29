@@ -6,11 +6,14 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import LeftNav from '../Pages/Home/Shared/LeftNav/LeftNav';
 import RightNav from '../Pages/Home/Shared/RightNav/RightNav';
+import { Outlet } from 'react-router-dom';
+import NavigationBar from '../Pages/Home/Shared/NavigationBar/NavigationBar';
 
 const Layout = () => {
     return (
         <div>
             <Header></Header>
+            <NavigationBar></NavigationBar>
             <Container>
                 <Row>
                     <Col sm={3}>
@@ -18,7 +21,7 @@ const Layout = () => {
                     </Col>
 
                     <Col sm={6}>
-                        <h2>Main Content coming</h2>
+                        <Outlet></Outlet>
                     </Col>
 
                     <Col sm={3}>
@@ -31,6 +34,7 @@ const Layout = () => {
             </Container>
 
             <Footer></Footer>
+            <Outlet></Outlet>
         </div>
     );
 };
