@@ -24,12 +24,12 @@ const NavigationBar = () => {
                                 <Link className='me-3' to='/category/0'>
                                     Home
                                 </Link>
-                                <Link className='me-3' to=''>
+                                {/* <Link className='me-3' to=''>
                                     About
                                 </Link>
                                 <Link className='me-3' to=''>
                                     Career
-                                </Link>
+                                </Link> */}
                         </Nav>
                         <Nav>
                                 {user && <FaUserCircle 

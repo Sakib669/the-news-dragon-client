@@ -4,6 +4,7 @@ import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../../../Providers/AuthProvider';
+import useTitle from '../../../Hooks/useTitle';
 
 const Register = () => {
 
@@ -11,6 +12,7 @@ const Register = () => {
     const [success, setSuccess] = useState(null);
     const [error, setError] = useState(null);
     const [accepted, setAccepted] = useState(false);
+    useTitle('Register');
 
     const handleRegister = (event) => {
         event.preventDefault();
